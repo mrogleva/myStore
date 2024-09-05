@@ -8,7 +8,7 @@ class Customer : public User {
 
 public:
     Customer(std::string name);
-    virtual ~Customer() = default;
+    ~Customer() = default;
     void update(std::string message) override;
     
 };

@@ -2,12 +2,14 @@
 #define USERFACTORY_HPP
 
 #include <string>
-#include "../../businessLogic/inc/user.hpp"
+#include <memory>
+#include "../../store/inc/user.hpp"
 
-class UserFactory {
+class UserFactory
+{
 
 public:
-    User* createUser(std::string name, std::string role);
+    std::shared_ptr<User> createUser(std::string name, std::string role);
 };
 
 #endif // USERFACTORY_HPP
